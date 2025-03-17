@@ -1,10 +1,10 @@
 """
-    Bench the huggingface vLM with benchmark MMMU
+Bench the huggingface vLM with benchmark MMMU
 
-    Usage:
-        python benchmark/mmmu/bench_hf.py --model-path Qwen/Qwen2-VL-7B-Instruct
+Usage:
+    python benchmark/mmmu/bench_hf.py --model-path Qwen/Qwen2-VL-7B-Instruct
 
-    The eval output will be logged
+The eval output will be logged
 """
 
 import argparse
