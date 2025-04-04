@@ -142,24 +142,24 @@ class ArcticMoE(nn.Module):
             if self.is_quant:
                 raise NotImplementedError("Quantization is not supported yet.")
             else:
-              self.ws = nn.Parameter(
-                  torch.empty(
-                      self.num_experts,
-                      2 * self.intermediate_size,
-                      self.hidden_size,
-                      device=current_platform.device_type,
-                      dtype=self.params_dtype,
-                  )
-              )
-              self.w2s = nn.Parameter(
-                  torch.empty(
-                      self.num_experts,
-                      self.hidden_size,
-                      self.intermediate_size,
-                      device=current_platform.device_type,
-                      dtype=self.params_dtype,
-                  )
-              )
+                self.ws = nn.Parameter(
+                    torch.empty(
+                        self.num_experts,
+                        2 * self.intermediate_size,
+                        self.hidden_size,
+                        device=current_platform.device_type,
+                        dtype=self.params_dtype,
+                    )
+                )
+                self.w2s = nn.Parameter(
+                    torch.empty(
+                        self.num_experts,
+                        self.hidden_size,
+                        self.intermediate_size,
+                        device=current_platform.device_type,
+                        dtype=self.params_dtype,
+                    )
+                )
             set_weight_attrs(
                 self.ws,
                 {

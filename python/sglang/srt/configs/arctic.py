@@ -113,7 +113,7 @@ class ArcticConfig(PretrainedConfig):
         self.num_experts_per_tok = num_experts_per_tok
         self.num_local_experts = num_local_experts
         self.moe_layer_frequency = moe_layer_frequency
-        
+
         # For backward compatibility
         self._attn_implementation = kwargs.pop("_attn_implementation", "eager")
         self.use_residual = kwargs.pop("use_residual", True)
