@@ -433,7 +433,7 @@ class ArcticModel(nn.Module):
         return hidden_states
 
 
-class ArcticForCausalLM(nn.Module, SupportsPP, SupportsQuant):
+class ArcticForCausalLM(nn.Module):
     packed_modules_mapping = {"qkv_proj": ["q_proj", "k_proj", "v_proj"]}
 
     def __init__(
