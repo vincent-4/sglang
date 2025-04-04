@@ -33,7 +33,7 @@ from sglang.srt.layers.vocab_parallel_embedding import (
 from sglang.srt.model_loader.weight_utils import default_weight_loader
 from sglang.srt.model_executor.utils import set_weight_attrs
 from sglang.srt.platforms import current_platform
-from vllm.transformers_utils.configs.arctic import ArcticConfig
+from sglang.srt.configs.arctic import ArcticConfig
 
 from .interfaces import SupportsPP, SupportsQuant
 from .utils import (
